@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alta Gracia RP | Servidor Profesional ER:LC</title>
+  <meta name="description" content="Bienvenido a Alta Gracia RP, el servidor de Emergency Response: Liberty County en Roblox. Experiencia seria de juego de rol con economía equilibrada y una comunidad organizada.">
+  
+  <!-- Google Fonts: Plus Jakarta Sans e Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Subtle Ambient Glows -->
+  <div class="ambient-glow glow-top"></div>
+  <div class="ambient-glow glow-bottom"></div>
+
+  <!-- Background Particles Canvas (Faint & Elegant) -->
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- Header Navigation -->
+  <header>
+    <div class="nav-container">
+      <div class="logo">
+        <span class="logo-accent">Alta Gracia</span><span class="logo-light"> RP</span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#home" class="nav-link active"><span class="nav-underline"></span>Inicio</a></li>
+          <li><a href="#informacion" class="nav-link"><span class="nav-underline"></span>Información</a></li>
+          <li><a href="#participar" class="nav-link"><span class="nav-underline"></span>Participar</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <a href="https://discord.gg/e6ReNgFH" target="_blank" rel="noopener noreferrer" class="btn-nav">
+          <i class="fa-brands fa-discord"></i><span>Comunidad</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    
+    <!-- Section: Home / Hero -->
+    <section id="home" class="hero-section">
+      <div class="container hero-container">
+        
+        <!-- Hero Text -->
+        <div class="hero-content scroll-animate">
+          <div class="server-badge">
+            <span class="pulse-indicator"></span> Servidor Verificado ER:LC
+          </div>
+          <h1 class="hero-title">El estándar profesional del <span class="gradient-text">Roleplay Serio</span></h1>
+          <p class="hero-description">
+            ¿Buscas un buen servidor? Te presentamos **Alta Gracia RP**. Un espacio diseñado por y para entusiastas del rol en Roblox. Disfruta de una infraestructura sólida, economía simulada de manera realista y una comunidad comprometida con la calidad de juego.
+          </p>
+          <div class="hero-buttons">
+            <a href="#participar" class="btn btn-primary">
+              Comenzar ahora <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a href="#informacion" class="btn btn-secondary">
+              Ver características
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Dashboard Widget (Sleek and Modern Mockup) -->
+        <div class="hero-widget-wrapper scroll-animate">
+          <div class="dashboard-widget">
+            <div class="widget-header">
+              <div class="window-controls">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </div>
+              <span class="widget-title">Panel de Control &bull; Alta Gracia RP</span>
+              <span class="status-indicator"><span class="online-dot"></span> Online</span>
+            </div>
+            
+            <div class="widget-grid">
+              <div class="grid-card">
+                <span class="card-label">Jugadores Activos</span>
+                <div class="card-value">138<span class="val-max">/150</span></div>
+                <div class="progress-bar-container">
+                  <div class="progress-bar-fill" style="width: 92%;"></div>
+                </div>
+              </div>
+              <div class="grid-card">
+                <span class="card-label">Modo de Juego</span>
+                <div class="card-value-text text-indigo">Serious RP</div>
+                <span class="card-subtext">Reglas estrictas</span>
+              </div>
+              <div class="grid-card">
+                <span class="card-label">Estado de Red</span>
+                <div class="card-value-text text-emerald">Estable</div>
+                <span class="card-subtext">Ping 45ms Promedio</span>
+              </div>
+            </div>
+
+            <!-- SVG Elegant Chart -->
+            <div class="chart-container">
+              <div class="chart-header">
+                <span class="chart-title">Actividad en las últimas 24 horas</span>
+                <span class="chart-legend"><i class="fa-solid fa-circle"></i> Tráfico de Usuarios</span>
+              </div>
+              <svg class="chart-svg" viewBox="0 0 340 100" preserveAspectRatio="none">
+                <defs>
+                  <linearGradient id="chart-grad" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="var(--primary)" stop-opacity="0.25"/>
+                    <stop offset="100%" stop-color="var(--primary)" stop-opacity="0.0"/>
+                  </linearGradient>
+                </defs>
+                <!-- Filled Area -->
+                <path d="M 0 90 Q 30 75 60 85 T 120 45 T 180 55 T 240 30 T 300 25 T 340 15 L 340 100 L 0 100 Z" fill="url(#chart-grad)" />
+                <!-- Line -->
+                <path d="M 0 90 Q 30 75 60 85 T 120 45 T 180 55 T 240 30 T 300 25 T 340 15" fill="none" stroke="var(--primary)" stroke-width="2" />
+                <!-- Active Point Glow -->
+                <circle cx="340" cy="15" r="4" fill="var(--secondary)" />
+                <circle cx="340" cy="15" r="8" fill="var(--secondary)" opacity="0.3" class="pulse-circle" />
+              </svg>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Section: Information -->
+    <section id="informacion" class="info-section">
+      <div class="container">
+        
+        <div class="section-header scroll-animate">
+          <h2 class="section-title">Nuestros Pilares de <span class="gradient-text">Desarrollo</span></h2>
+          <p class="section-subtitle">Construimos una plataforma seria donde el comportamiento racional y el juego de rol inmersivo son la prioridad absoluta.</p>
+        </div>
+
+        <div class="features-grid">
+          <!-- Feature 1 -->
+          <div class="feature-card scroll-animate">
+            <div class="feature-icon">
+              <i class="fa-solid fa-coins"></i>
+            </div>
+            <h3 class="feature-title">Economía Equilibrada</h3>
+            <p class="feature-desc">Un sistema económico ajustado para evitar la inflación desmedida. Adquiere vehículos, propiedades y equipamiento mediante un progreso gratificante y justo.</p>
+          </div>
+
+          <!-- Feature 2 -->
+          <div class="feature-card scroll-animate">
+            <div class="feature-icon">
+              <i class="fa-solid fa-building-shield"></i>
+            </div>
+            <h3 class="feature-title">Facciones Jerarquizadas</h3>
+            <p class="feature-desc">Departamentos de seguridad pública y emergencias médicas estructurados formalmente. Con entrenamientos obligatorios y protocolos basados en la vida real.</p>
+          </div>
+
+          <!-- Feature 3 -->
+          <div class="feature-card scroll-animate">
+            <div class="feature-icon">
+              <i class="fa-solid fa-signature"></i>
+            </div>
+            <h3 class="feature-title">Regulaciones Claras</h3>
+            <p class="feature-desc">Normativas redactadas con profesionalidad para evitar conflictos y malentendidos. Un reglamento que protege al usuario serio y fomenta la interpretación realista.</p>
+          </div>
+
+          <!-- Feature 4 -->
+          <div class="feature-card scroll-animate">
+            <div class="feature-icon">
+              <i class="fa-solid fa-headset"></i>
+            </div>
+            <h3 class="feature-title">Staff Especializado</h3>
+            <p class="feature-desc">Un equipo de administración imparcial y maduro, enfocado en solucionar problemas de forma eficiente y en asegurar el cumplimiento de las normas.</p>
+          </div>
+        </div>
+
+        <!-- Showcase: Departments (Professional styling) -->
+        <div class="showcase-box scroll-animate">
+          <div class="showcase-nav">
+            <button class="showcase-tab active" data-target="police-tab">
+              LCPD (Policía)
+            </button>
+            <button class="showcase-tab" data-target="fire-tab">
+              Bomberos & EMS
+            </button>
+            <button class="showcase-tab" data-target="civ-tab">
+              Civiles
+            </button>
+          </div>
+          <div class="showcase-content">
+            <div class="tab-panel active" id="police-tab">
+              <div class="tab-layout">
+                <div class="tab-text">
+                  <h3>Departamento de Policía del Condado</h3>
+                  <p>Encargados de mantener el orden público y velar por la seguridad de la ciudadanía. El ingreso requiere superar una academia formal y evaluaciones teóricas/prácticas.</p>
+                  <ul class="clean-list">
+                    <li><span class="list-bullet">&bull;</span> División de Tránsito y Patrullaje Urbano</li>
+                    <li><span class="list-bullet">&bull;</span> Unidad SWAT para respuesta táctica ante amenazas mayores</li>
+                    <li><span class="list-bullet">&bull;</span> Sistema estructurado de rangos y méritos oficiales</li>
+                  </ul>
+                </div>
+                <div class="tab-visual">
+                  <div class="dept-badge badge-police">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <h4>POLICE DEPARTMENT</h4>
+                    <span>LIBERTY COUNTY</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="tab-panel" id="fire-tab">
+              <div class="tab-layout">
+                <div class="tab-text">
+                  <h3>Servicios Médicos e Incendios (LCFD)</h3>
+                  <p>Primera línea de defensa frente a siniestros y emergencias de salud. Contamos con estaciones equipadas y vehículos especializados para cualquier tipo de rescate.</p>
+                  <ul class="clean-list">
+                    <li><span class="list-bullet">&bull;</span> Respuesta rápida ante incendios estructurales y forestales</li>
+                    <li><span class="list-bullet">&bull;</span> Paramédicos certificados en soporte vital avanzado</li>
+                    <li><span class="list-bullet">&bull;</span> Despliegue de ambulancias y camiones pesados de rescate</li>
+                  </ul>
+                </div>
+                <div class="tab-visual">
+                  <div class="dept-badge badge-fire">
+                    <i class="fa-solid fa-kit-medical"></i>
+                    <h4>FIRE & EMS</h4>
+                    <span>FIRST RESPONDERS</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="tab-panel" id="civ-tab">
+              <div class="tab-layout">
+                <div class="tab-text">
+                  <h3>Rol Civil & Organizaciones</h3>
+                  <p>La base social del condado. Como civil, puedes emprender en la legalidad abriendo tu propio taller de mecánicos, o desarrollar actividades ilícitas y asaltos coordinados de alta complejidad.</p>
+                  <ul class="clean-list">
+                    <li><span class="list-bullet">&bull;</span> Empleos públicos e industrias privadas configurables</li>
+                    <li><span class="list-bullet">&bull;</span> Red delictiva organizada con sistemas de atracos equilibrados</li>
+                    <li><span class="list-bullet">&bull;</span> Libertad absoluta para crear tu personaje e historia de vida</li>
+                  </ul>
+                </div>
+                <div class="tab-visual">
+                  <div class="dept-badge badge-civ">
+                    <i class="fa-solid fa-briefcase"></i>
+                    <h4>CIVIL OPERATIONS</h4>
+                    <span>UNLIMITED ROLES</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Section: Participate -->
+    <section id="participar" class="participate-section">
+      <div class="container participate-container">
+        
+        <!-- Left Side: Interactive 3D Acrylic/Glass Card (Replaces Science Fiction Hologram) -->
+        <div class="glass-card-wrapper scroll-animate">
+          <div class="glass-card-trigger" id="glass-card-trigger">
+            <div class="glass-card-glow-subtle"></div>
+            <!-- Rotating Acrylic Card -->
+            <div class="glass-card" id="glass-card">
+              <div class="glass-card-shine" id="glass-card-shine"></div>
+              <div class="glass-card-border-glow"></div>
+              
+              <!-- Card Content -->
+              <div class="glass-card-inner">
+                <div class="card-logo">
+                  <svg viewBox="0 0 127.14 96.36" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M107.7,8.07A105.15,105.15,0,0,0,77.26,0a77.19,77.19,0,0,0-3.3,6.83A96.67,96.67,0,0,0,53.22,6.83,77.19,77.19,0,0,0,49.88,0,105.15,105.15,0,0,0,19.44,8.07C3.66,31.58-1.86,54.65,1,77.53A105.73,105.73,0,0,0,32,96.36a77.7,77.7,0,0,0,6.63-10.85,68.43,68.43,0,0,1-10.5-5c.88-.65,1.72-1.34,2.51-2a75.58,75.58,0,0,0,73,0c.79.71,1.63,1.4,2.51,2a68.43,68.43,0,0,1-10.5,5,77.7,77.7,0,0,0,6.63,10.85,105.73,105.73,0,0,0,31.06-18.83C129.87,46.86,123.65,24,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53S36.18,40.36,42.45,40.36,53.83,46,53.83,53,48.72,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.24,60,73.24,53S78.41,40.36,84.69,40.36,96.07,46,96.07,53,91,65.69,84.69,65.69Z"/>
+                  </svg>
+                </div>
+                <div class="card-brand">DISCORD ACCESSIBLE</div>
+                <div class="card-status">
+                  <span class="active-badge"></span> CONEXIÓN SEGURA
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side: Content -->
+        <div class="participate-content scroll-animate">
+          <h2 class="participate-title">Únete a nuestra <span class="gradient-text">Comunidad</span></h2>
+          <p class="participate-text">
+            El acceso al servidor de Roblox ER:LC, el registro en el Whitelist y la comunicación con el Staff se gestionan íntegramente a través de nuestra comunidad oficial en Discord.
+          </p>
+          
+          <div class="steps-box">
+            <div class="step-row">
+              <div class="step-icon"><i class="fa-solid fa-door-open"></i></div>
+              <div class="step-text">
+                <h4>1. Conexión de Cuenta</h4>
+                <p>Ingresa al servidor mediante el enlace de invitación oficial.</p>
+              </div>
+            </div>
+            <div class="step-row">
+              <div class="step-icon"><i class="fa-solid fa-list-check"></i></div>
+              <div class="step-text">
+                <h4>2. Whitelist Automatizado</h4>
+                <p>Verifica tu perfil de Roblox en el canal correspondiente para activar tu cuenta.</p>
+              </div>
+            </div>
+            <div class="step-row">
+              <div class="step-icon"><i class="fa-solid fa-play"></i></div>
+              <div class="step-text">
+                <h4>3. Ingreso al Servidor</h4>
+                <p>Usa la clave provista para ingresar a la sesión activa en el juego.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="participate-actions">
+            <a href="https://discord.gg/e6ReNgFH" target="_blank" rel="noopener noreferrer" class="btn btn-indigo-glow">
+              <i class="fa-brands fa-discord"></i> Ingresar al Discord Oficial
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-container">
+      <div class="footer-info">
+        <div class="footer-logo">Alta Gracia<span> RP</span></div>
+        <p>Comunidad y servidor de simulación de rol independiente en la plataforma Roblox ER:LC. No asociado con Roblox Corporation.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="#home">Inicio</a></li>
+          <li><a href="#informacion">Información</a></li>
+          <li><a href="#participar">Participar</a></li>
+        </ul>
+      </div>
+      <div class="footer-social">
+        <h4>Canales Oficiales</h4>
+        <div class="social-icons">
+          <a href="https://discord.gg/e6ReNgFH" target="_blank" rel="noopener noreferrer" title="Discord"><i class="fa-brands fa-discord"></i></a>
+          <a href="#" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="#" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Alta Gracia RP. Todos los derechos reservados. Diseñado de forma profesional.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // ----------------------------------------------------
+    // 1. Particle Background System (Subtle, professional)
+    // ----------------------------------------------------
+    const canvas = document.getElementById('particle-canvas');
+    const ctx = canvas.getContext('2d');
+
+    let particles = [];
+    const maxParticles = 40; // Lower count for elegance
+
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+
+    class Particle {
+      constructor() {
+        this.reset();
+      }
+      reset() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height + 20;
+        this.size = Math.random() * 1.5 + 0.5;
+        this.speedY = Math.random() * 0.3 + 0.05; // Very slow drift
+        this.speedX = Math.random() * 0.2 - 0.1;
+        this.opacity = Math.random() * 0.3 + 0.05;
+      }
+      update() {
+        this.y -= this.speedY;
+        this.x += this.speedX;
+        if (this.y < 0 || this.x < 0 || this.x > canvas.width) {
+          this.reset();
+        }
+      }
+      draw() {
+        ctx.fillStyle = `rgba(99, 102, 241, ${this.opacity})`; // Indigo particles
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    }
+
+    for (let i = 0; i < maxParticles; i++) {
+      particles.push(new Particle());
+      particles[i].y = Math.random() * canvas.height;
+    }
+
+    function animateParticles() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      particles.forEach(p => {
+        p.update();
+        p.draw();
+      });
+      requestAnimationFrame(animateParticles);
+    }
+    animateParticles();
+
+    // ----------------------------------------------------
+    // 2. Showcase Tab Switcher
+    // ----------------------------------------------------
+    const tabs = document.querySelectorAll('.showcase-tab');
+    const panels = document.querySelectorAll('.tab-panel');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        panels.forEach(p => p.classList.remove('active'));
+
+        tab.classList.add('active');
+        const targetId = tab.getAttribute('data-target');
+        document.getElementById(targetId).classList.add('active');
+      });
+    });
+
+    // ----------------------------------------------------
+    // 3. 3D Interactive Acrylic/Glass Card with Shine
+    // ----------------------------------------------------
+    const cardTrigger = document.getElementById('glass-card-trigger');
+    const card = document.getElementById('glass-card');
+    const shine = document.getElementById('glass-card-shine');
+
+    cardTrigger.addEventListener('mousemove', (e) => {
+      const rect = cardTrigger.getBoundingClientRect();
+      const x = e.clientX - rect.left; // cursor position relative to element
+      const y = e.clientY - rect.top;
+      
+      const width = rect.width;
+      const height = rect.height;
+
+      // Transform calculation (tilt range: -15deg to 15deg)
+      const rotateX = -((y - height / 2) / (height / 2)) * 12;
+      const rotateY = ((x - width / 2) / (width / 2)) * 12;
+
+      card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+      
+      // Dynamic shine gradient following the cursor
+      shine.style.background = `radial-gradient(circle at ${x}px ${y}px, rgba(255, 255, 255, 0.12) 0%, transparent 60%)`;
+      shine.style.opacity = '1';
+    });
+
+    cardTrigger.addEventListener('mouseleave', () => {
+      // Smooth reset
+      card.style.transform = 'rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+      shine.style.opacity = '0';
+      card.style.transition = 'transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.6s ease';
+      shine.style.transition = 'opacity 0.6s ease';
+    });
+
+    cardTrigger.addEventListener('mouseenter', () => {
+      card.style.transition = 'none';
+      shine.style.transition = 'none';
+    });
+
+    // ----------------------------------------------------
+    // 4. Scroll Reveal Animations (Intersection Observer)
+    // ----------------------------------------------------
+    const animatedElements = document.querySelectorAll('.scroll-animate');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {
+      threshold: 0.08
+    });
+
+    animatedElements.forEach(el => observer.observe(el));
+    // Trigger on first load for items in view
+    document.querySelectorAll('.hero-section, .hero-widget-wrapper').forEach(el => {
+      el.classList.add('scroll-animate');
+      observer.observe(el);
+    });
+
+    // ----------------------------------------------------
+    // 5. Active Link Highlight (Scroll Spy)
+    // ----------------------------------------------------
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (window.scrollY >= sectionTop - 160) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href').includes(current)) {
+          link.classList.add('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
